@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2de4699de4963439a668ac4198ff92, type: 3}
+  m_Name: Celling 1
+  m_EditorClassIdentifier: 
+  spriteToShow: {fileID: 21300000, guid: ecf70430be8e70e45b8fb9b1f2da7e1f, type: 3}
+  spriteToSet: {fileID: 21300000, guid: 3a4f88debdc7a8b44b72971f8023d422, type: 3}
+  cost: 300
