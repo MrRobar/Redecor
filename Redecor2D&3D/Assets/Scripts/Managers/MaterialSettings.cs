@@ -36,6 +36,11 @@ namespace Game.Managers
 
         private void CheckMaterial()
         {
+            if(_rendererToChange.data == null)
+            {
+                return;
+            }
+
             if(gameObject.name != _rendererToChange.data.gameObject.name)
             {
                 _thisRenderer.material = _defaultMaterial;
