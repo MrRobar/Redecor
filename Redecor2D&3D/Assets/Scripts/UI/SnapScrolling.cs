@@ -23,6 +23,9 @@ namespace Game.UI
         [SerializeField]
         private int _snapSpeed;
 
+        [SerializeField]
+        private RectTransform _materialsContent;
+
         private int _selectedZoneID = 0;
 
         private GameObject[] _instantiatedZones;
@@ -30,6 +33,8 @@ namespace Game.UI
         private Vector2[] _zonesPositions;
 
         private Vector2 _contentVector;
+
+        private Vector2 _materialsContentVector;
 
         private RectTransform _contentRect;
 
@@ -60,10 +65,15 @@ namespace Game.UI
 
         private void Update()
         {
-            #region SetTextColor&Enable/DisableBlueLine
+            SetColorAndBlueLine();
+        }
+
+        #region SetTextColor&Enable/DisableBlueLine
+        private void SetColorAndBlueLine()
+        {
             if (_initialized == true)
             {
-                
+
                 for (int i = 0; i < _categoryZonesCount; i++)
                 {
                     _instantiatedZones[i].transform.GetChild(1).gameObject.SetActive(false);
@@ -72,10 +82,17 @@ namespace Game.UI
                     {
                         _instantiatedZones[i].transform.GetChild(1).gameObject.SetActive(true);
                         _instantiatedZones[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0f, 0f, 0f);
+                        SetProperPack(i);
                     }
                 }
             }
-            #endregion
+        }
+        #endregion
+
+        private void SetProperPack(int index)
+        {
+            _materialsContentVector.x = Mathf.SmoothStep(_materialsContent.anchoredPosition.x, -(index * 600), _snapSpeed * Time.deltaTime);
+            _materialsContent.anchoredPosition = _materialsContentVector;
         }
 
         private void LateUpdate()
