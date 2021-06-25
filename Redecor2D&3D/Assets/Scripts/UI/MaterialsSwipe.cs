@@ -1,38 +1,51 @@
-﻿using System.Collections;
-using UnityEngine.EventSystems;
+﻿using UnityEngine.EventSystems;
 using UnityEngine;
+using Events;
+using ScriptableValues;
 
-public class MaterialsSwipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+namespace Game.UI
 {
 
-    [SerializeField]
-    private Vector2 _startPos = Vector2.zero;
-
-    [SerializeField]
-    private int _addableSwipeDistance = 20;
-
-    [SerializeField]
-    private bool _isFingerDown = false;
-
-    public void OnPointerDown(PointerEventData eventData)
+    public class MaterialsSwipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
-        _startPos = Input.mousePosition;
-        _isFingerDown = true;
-    }
 
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        if (_isFingerDown == true)
+        [SerializeField]
+        private EventDispatcher _swipeDispatcher;
+
+        [SerializeField]
+        private Vector2 _startPos = Vector2.zero;
+
+        [SerializeField]
+        private ScriptableIntValue _swipeData;
+
+        [SerializeField]
+        private int _addableSwipeDistance = 20;
+
+        [SerializeField]
+        private bool _isFingerDown = false;
+
+        public void OnPointerDown(PointerEventData eventData)
         {
-            if (Input.mousePosition.x >= _startPos.x + _addableSwipeDistance)
+            _startPos = Input.mousePosition;
+            _isFingerDown = true;
+        }
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            if (_isFingerDown == true)
             {
-                _isFingerDown = false;
-                Debug.Log("Swipe left");
-            }
-            else if (Input.mousePosition.x <= _startPos.x - _addableSwipeDistance)
-            {
-                _isFingerDown = false;
-                Debug.Log("Swipe right");
+                if (Input.mousePosition.x >= _startPos.x + _addableSwipeDistance)
+                {
+                    _isFingerDown = false;
+                    _swipeData.data = -1;
+                    _swipeDispatcher.Dispatch();
+                }
+                else if (Input.mousePosition.x <= _startPos.x - _addableSwipeDistance)
+                {
+                    _isFingerDown = false;
+                    _swipeData.data = 1;
+                    _swipeDispatcher.Dispatch();
+                }
             }
         }
     }
