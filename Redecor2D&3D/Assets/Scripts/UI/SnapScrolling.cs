@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ScriptableValues;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -7,6 +8,9 @@ namespace Game.UI
 
     public class SnapScrolling : MonoBehaviour
     {
+
+        [SerializeField]
+        private ScriptableVector2 _materialsContentVector;
 
         [SerializeField]
         private GameObject _categoryZonePrefab;
@@ -34,20 +38,20 @@ namespace Game.UI
 
         private Vector2 _contentVector;
 
-        private Vector2 _materialsContentVector;
-
         private RectTransform _contentRect;
 
         private bool _isScrolling;
 
         private bool _initialized = false;
 
+        public bool isNativeScroll = true;
+
         private void Awake()
         {
             _instantiatedZones = new GameObject[_categoryZonesCount];
             _zonesPositions = new Vector2[_categoryZonesCount];
             _contentRect = GetComponent<RectTransform>();
-
+            
             for (int i = 0; i < _categoryZonesCount; i++)
             {
                 _instantiatedZones[i] = Instantiate(_categoryZonePrefab, transform, false);
@@ -91,8 +95,11 @@ namespace Game.UI
 
         private void SetProperPack(int index)
         {
-            _materialsContentVector.x = Mathf.SmoothStep(_materialsContent.anchoredPosition.x, -(index * 600), _snapSpeed * Time.deltaTime);
-            _materialsContent.anchoredPosition = _materialsContentVector;
+            if(isNativeScroll == true)
+            {
+                _materialsContentVector.data.x = Mathf.SmoothStep(_materialsContent.anchoredPosition.x, -(index * 600), _snapSpeed * Time.deltaTime);
+                _materialsContent.anchoredPosition = _materialsContentVector.data;
+            }
         }
 
         private void LateUpdate()
@@ -125,15 +132,18 @@ namespace Game.UI
             }
             #endregion
 
-            //Чтобы контент не привязывался к ближжайшей панели пока мы скролим
+            //Чтобы контент не привязывался к ближайшей панели пока мы скролим
             if (_isScrolling == true)
             {
                 return;
             }
 
             #region SetContentPosition
-            _contentVector.x = Mathf.SmoothStep(_contentRect.anchoredPosition.x, _zonesPositions[_selectedZoneID].x, _snapSpeed * Time.deltaTime);
-            _contentRect.anchoredPosition = _contentVector;
+            if (isNativeScroll)
+            {
+                _contentVector.x = Mathf.SmoothStep(_contentRect.anchoredPosition.x, _zonesPositions[_selectedZoneID].x, _snapSpeed * Time.deltaTime);
+                _contentRect.anchoredPosition = _contentVector;
+            }
             #endregion
         }
 
