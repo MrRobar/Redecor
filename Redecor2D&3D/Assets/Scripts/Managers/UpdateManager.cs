@@ -10,9 +10,17 @@ namespace Game.Managers
         [SerializeField]
         private EventDispatcher _updateEventDispatcher;
 
+        [SerializeField]
+        private EventDispatcher _lateUpdateDispatcher;
+
         private void Update()
         {
             _updateEventDispatcher.Dispatch();
+        }
+
+        private void LateUpdate()
+        {
+            _lateUpdateDispatcher.Dispatch();
         }
     }
 }
