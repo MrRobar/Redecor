@@ -42,9 +42,14 @@ namespace Game.Managers
         private Vector2[] _namesPositions;
         private Vector2[] _keepersPositions;
 
+        private Vector2 _namesContentVector;
+        private Vector2 _materialsContentVector;
+
         [SerializeField]
         private int _columns;
-
+        
+        [SerializeField]
+        private int _snapSpeed;
 
         private void Awake()
         {
@@ -76,14 +81,16 @@ namespace Game.Managers
         private void OnEnable()
         {
             _lateUpdateEventListener.OnEventHappened += SetNearestID;
+            _lateUpdateEventListener.OnEventHappened += CheckForEqualIndex;
         }
 
         private void OnDisable()
         {
             _lateUpdateEventListener.OnEventHappened -= SetNearestID;
+            _lateUpdateEventListener.OnEventHappened -= CheckForEqualIndex;
         }
 
-        private void SetNearestID()
+        private void SetNearestID() // Попробовать сравнивать Х < 270(половина NamesScroll)
         {
             float nearestPos = float.MaxValue;
             for (int i = 0; i < _columns; i++)
@@ -95,6 +102,23 @@ namespace Game.Managers
                     _selectedID.data = i;
                 }
             }
+        }
+
+        private void CheckForEqualIndex()
+        {
+            for (int i = 0; i < _columns; i++)
+            {
+                if(i == _selectedID.data)
+                {
+                    SetProperPack(i - 1);
+                }
+            }
+        }
+
+        private void SetProperPack(int index)
+        {
+            _materialsContentVector.x = Mathf.SmoothStep(_materialsContent.anchoredPosition.x, -(index * 540), _snapSpeed * Time.deltaTime);
+            _materialsContent.anchoredPosition = _materialsContentVector;
         }
 
         private void SetDefaultCategory()
