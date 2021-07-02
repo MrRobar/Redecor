@@ -44,7 +44,7 @@ namespace Game.Managers
         private RectTransform _empty;
 
         private Vector2[] _namesPositions;
-        private Vector2[] _keepersPositions;
+        private Vector2[] _materialsPositions;
 
         private Vector2 _namesContentVector;
         private Vector2 _materialsContentVector;
@@ -58,10 +58,13 @@ namespace Game.Managers
         [SerializeField]
         private int _namesOffset = 80;
 
+        [SerializeField]
+        private bool _isScrollingViaNames = true;
+
         private void Awake()
         {
             _namesPositions = new Vector2[_columns];
-            _keepersPositions = new Vector2[_columns];
+            _materialsPositions = new Vector2[_columns];
 
             for (int i = 0; i < _columns; i++)
             {
@@ -79,7 +82,7 @@ namespace Game.Managers
                 name.localPosition = new Vector2(_namesList[i - 1].localPosition.x + _namePrefab.GetComponent<RectTransform>().sizeDelta.x + _namesOffset, _namesList[i].localPosition.y);
                 name.GetComponent<ButtonName>().ID = i;
                 _namesPositions[i] = -_namesList[i].transform.localPosition;
-                _keepersPositions[i] = -_keepersList[i].transform.localPosition;
+                _materialsPositions[i] = -_keepersList[i].transform.localPosition;
             }
             Instantiate(_empty, _namesParent);
         }
@@ -98,15 +101,21 @@ namespace Game.Managers
             _lateUpdateEventListener.OnEventHappened -= EditNameState;
         }
 
-        private void SetNearestID() // Попробовать сравнивать Х < 270(половина NamesScroll)
+        private void SetNearestID() 
         {
             float nearestPos = float.MaxValue;
             for (int i = 0; i < _columns; i++)
             {
-                float distance = Mathf.Abs(_namesContent.anchoredPosition.x - _namesPositions[i].x);
-                if (distance < nearestPos)
+                float namesDistance = Mathf.Abs(_namesContent.anchoredPosition.x - _namesPositions[i].x);
+                float materialsDistance = Mathf.Abs(_materialsContent.anchoredPosition.x - _materialsPositions[i].x);
+                if (namesDistance < nearestPos && _isScrollingViaNames == true)
                 {
-                    nearestPos = distance;
+                    nearestPos = namesDistance;
+                    _selectedID.data = i;
+                }
+                if(materialsDistance < nearestPos && _isScrollingViaNames == false)
+                {
+                    nearestPos = materialsDistance;
                     _selectedID.data = i;
                 }
             }
@@ -126,7 +135,7 @@ namespace Game.Managers
 
         private void SetProperName(int index)
         {
-            _namesContentVector.x = Mathf.SmoothStep(_namesContent.anchoredPosition.x, -(index * 200), _snapSpeed * Time.deltaTime);
+            _namesContentVector.x = Mathf.SmoothStep(_namesContent.anchoredPosition.x, -(index * 200), _snapSpeed * 2 * Time.deltaTime);
             _namesContent.anchoredPosition = _namesContentVector;
         }
 
@@ -134,12 +143,6 @@ namespace Game.Managers
         {
             _materialsContentVector.x = Mathf.SmoothStep(_materialsContent.anchoredPosition.x, -(index * 540), _snapSpeed * Time.deltaTime);
             _materialsContent.anchoredPosition = _materialsContentVector;
-        }
-
-        private void SetDefaultCategory()
-        {
-            _namesContent.anchoredPosition = Vector2.zero;
-            _materialsContent.anchoredPosition = Vector2.zero;
         }
 
         private void EditNameState()
@@ -154,6 +157,11 @@ namespace Game.Managers
                     _namesList[i].transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0f, 0f, 0f);
                 }
             }
+        }
+        
+        public void SetScrollBool(bool scrolling)
+        {
+            _isScrollingViaNames = scrolling;
         }
     }
 }
