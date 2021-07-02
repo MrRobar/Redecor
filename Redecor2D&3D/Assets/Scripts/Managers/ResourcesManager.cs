@@ -61,6 +61,9 @@ namespace Game.Managers
         [SerializeField]
         private bool _isScrollingViaNames = true;
 
+        [SerializeField]
+        private bool _isScrolling = false;
+
         private void Awake()
         {
             _namesPositions = new Vector2[_columns];
