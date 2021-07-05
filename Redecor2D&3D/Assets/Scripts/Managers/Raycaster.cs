@@ -20,9 +20,6 @@ namespace Game.Managers
         [SerializeField]
         private Camera thisCamera;
 
-        [SerializeField]
-        private LayerMask layoutMask;
-
 
         private void OnEnable()
         {
@@ -41,6 +38,7 @@ namespace Game.Managers
 
                 if (IsPointerOverUIObject())
                 {
+                    Debug.Log("Over UI");
                     return;
                 }
 
@@ -50,6 +48,7 @@ namespace Game.Managers
                 {
                     _spriteToChange.data = hit.collider.GetComponent<SpriteRenderer>();
                     hit.collider.GetComponent<ChoseThroughObject>().UpdateUI();
+                    Debug.Log(hit.collider.name);
                 }
             }
         }
