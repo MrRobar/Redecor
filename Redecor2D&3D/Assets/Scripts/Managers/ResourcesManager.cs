@@ -7,6 +7,7 @@ using TMPro;
 
 namespace Game.Managers
 {
+
     public class ResourcesManager : MonoBehaviour
     {
 
@@ -17,7 +18,13 @@ namespace Game.Managers
         private ScriptableIntValue _selectedID;
 
         [SerializeField]
+        private ScriptableBool _isScrolling;
+
+        [SerializeField]
         private Transform _materialsKeeperPrefab;
+
+        [SerializeField]
+        private Transform _subCategoryPrefab;
 
         [SerializeField]
         private Transform _namePrefab;
@@ -60,9 +67,6 @@ namespace Game.Managers
 
         [SerializeField]
         private bool _isScrollingViaNames = true;
-
-        [SerializeField]
-        private bool _isScrolling = false;
 
         private void Awake()
         {
@@ -116,7 +120,7 @@ namespace Game.Managers
                     nearestPos = namesDistance;
                     _selectedID.data = i;
                 }
-                if(materialsDistance < nearestPos && _isScrollingViaNames == false)
+                else if(materialsDistance < nearestPos && _isScrollingViaNames == false)
                 {
                     nearestPos = materialsDistance;
                     _selectedID.data = i;
@@ -130,8 +134,12 @@ namespace Game.Managers
             {
                 if(i == _selectedID.data)
                 {
-                    SetProperName(i);
+                    if(_isScrolling.data == true)
+                    {
+                        return;
+                    }
                     SetProperPack(i);
+                    SetProperName(i);
                 }
             }
         }
