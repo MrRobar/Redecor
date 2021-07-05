@@ -92,6 +92,7 @@ namespace Game.Managers
                 _materialsPositions[i] = -_keepersList[i].transform.localPosition;
             }
             Instantiate(_empty, _namesParent);
+            Instantiate(_empty, _materialsParent);
         }
 
         private void OnEnable()
@@ -99,6 +100,7 @@ namespace Game.Managers
             _lateUpdateEventListener.OnEventHappened += SetNearestID;
             _lateUpdateEventListener.OnEventHappened += CheckForEqualIndex;
             _lateUpdateEventListener.OnEventHappened += EditNameState;
+            _lateUpdateEventListener.OnEventHappened += ResetScroll;
         }
 
         private void OnDisable()
@@ -106,6 +108,7 @@ namespace Game.Managers
             _lateUpdateEventListener.OnEventHappened -= SetNearestID;
             _lateUpdateEventListener.OnEventHappened -= CheckForEqualIndex;
             _lateUpdateEventListener.OnEventHappened -= EditNameState;
+            _lateUpdateEventListener.OnEventHappened -= ResetScroll;
         }
 
         private void SetNearestID() 
@@ -167,6 +170,14 @@ namespace Game.Managers
                     _namesList[i].transform.GetChild(0).gameObject.SetActive(true);
                     _namesList[i].transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0f, 0f, 0f);
                 }
+            }
+        }
+
+        private void ResetScroll()
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                _isScrollingViaNames = true;
             }
         }
         

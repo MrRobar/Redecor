@@ -38,7 +38,6 @@ namespace Game.Managers
 
                 if (IsPointerOverUIObject())
                 {
-                    Debug.Log("Over UI");
                     return;
                 }
 
