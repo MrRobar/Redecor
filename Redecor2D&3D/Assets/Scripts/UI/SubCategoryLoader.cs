@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableValues;
 
-namespace Game.Managers
+namespace Game.UI
 {
 
     public class SubCategoryLoader : MonoBehaviour
@@ -20,9 +20,9 @@ namespace Game.Managers
 
         private void OnEnable()
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < _infoToLoad.Count; i++)
             {
-                Instantiate(_materialPrefab, _parent);
+                var material = Instantiate(_materialPrefab, _parent);
             }
         }
     }

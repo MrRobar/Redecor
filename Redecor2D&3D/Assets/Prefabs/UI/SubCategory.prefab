@@ -243,7 +243,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88efd6ac8469298499866840f75824c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _infoToLoad: []
+  _infoToLoad:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _materialPrefab: {fileID: 1150035818670845764, guid: 2e3ae9fe34527c04cb6710541540eb9c,
     type: 3}
   _parent: {fileID: 3474531605136814823}
