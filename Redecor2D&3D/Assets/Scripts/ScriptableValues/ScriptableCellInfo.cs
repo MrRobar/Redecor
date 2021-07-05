@@ -11,7 +11,13 @@ namespace ScriptableValues
 
         public Sprite spriteToSet;
 
+        public Sprite spriteBlocked;
+
         public int cost;
+
+        public int amount;
+
+        public string matName;
     }
 }
 
