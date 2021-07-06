@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using Events;
 using ScriptableValues;
@@ -15,10 +16,16 @@ namespace Game.Managers
         private EventListener _lateUpdateEventListener;
 
         [SerializeField]
+        private EventListener _updateMaterialsContentEventListener;
+
+        [SerializeField]
         private ScriptableIntValue _selectedID;
 
         [SerializeField]
         private ScriptableBool _isScrolling;
+
+        [SerializeField]
+        private DataLoader _dataLoader;
 
         [SerializeField]
         private Transform _materialsKeeperPrefab;
@@ -79,8 +86,8 @@ namespace Game.Managers
                 var name = Instantiate(_namePrefab, _namesParent);
                 _keepersList.Add(keeper);
                 _namesList.Add(name);
-
-                if(i == 0)
+                
+                if (i == 0)
                 {
                     continue;
                 }
@@ -91,8 +98,14 @@ namespace Game.Managers
                 _namesPositions[i] = -_namesList[i].transform.localPosition;
                 _materialsPositions[i] = -_keepersList[i].transform.localPosition;
             }
+            for (int i = 0; i < _columns; i++)
+            {
+                _namesList[i].GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = _dataLoader.categoriesNames[i];
+                _keepersList[i].GetComponent<SubCategorySpawner>().CategoryData = _dataLoader.categories[i];
+            }
             Instantiate(_empty, _namesParent);
             Instantiate(_empty, _materialsParent);
+
         }
 
         private void OnEnable()
@@ -101,6 +114,7 @@ namespace Game.Managers
             _lateUpdateEventListener.OnEventHappened += CheckForEqualIndex;
             _lateUpdateEventListener.OnEventHappened += EditNameState;
             _lateUpdateEventListener.OnEventHappened += ResetScroll;
+            _updateMaterialsContentEventListener.OnEventHappened += ResetMaterialsContentPos;
         }
 
         private void OnDisable()
@@ -109,6 +123,12 @@ namespace Game.Managers
             _lateUpdateEventListener.OnEventHappened -= CheckForEqualIndex;
             _lateUpdateEventListener.OnEventHappened -= EditNameState;
             _lateUpdateEventListener.OnEventHappened -= ResetScroll;
+            _updateMaterialsContentEventListener.OnEventHappened -= ResetMaterialsContentPos;
+        }
+
+        private void ResetMaterialsContentPos()
+        {
+            StartCoroutine(ResetContentPos());
         }
 
         private void SetNearestID() 
@@ -184,6 +204,15 @@ namespace Game.Managers
         public void SetScrollBool(bool scrolling)
         {
             _isScrollingViaNames = scrolling;
+        }
+
+        private IEnumerator ResetContentPos()
+        {
+            yield return new WaitForSeconds(0.001f);
+            for (int i = 0; i < _columns; i++)
+            {
+                _keepersList[i].GetChild(0).GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -368.5f);
+            }
         }
     }
 }
