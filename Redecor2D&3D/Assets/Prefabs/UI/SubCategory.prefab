@@ -57,7 +57,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 20, y: 20}
+  m_Spacing: {x: 20, y: 40}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &6678943637790718410
@@ -94,8 +94,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 147.8117, y: -25}
-  m_SizeDelta: {x: 295.6234, y: 50}
+  m_AnchoredPosition: {x: 107.16, y: -18.12}
+  m_SizeDelta: {x: 214.32, y: 36.248825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4125488130561840083
 CanvasRenderer:
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -203,6 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6809634894560905356}
   - component: {fileID: 5490289555040234410}
+  - component: {fileID: 6234201665619887320}
   m_Layer: 5
   m_Name: SubCategory
   m_TagString: Untagged
@@ -243,15 +244,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88efd6ac8469298499866840f75824c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _infoToLoad:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _materialPrefab: {fileID: 1150035818670845764, guid: 2e3ae9fe34527c04cb6710541540eb9c,
+  _infoToLoad: []
+  _spawnedCategoriesEventListener: {fileID: 6234201665619887320}
+  _materialPrefab: {fileID: 8562116396387416771, guid: 94a4aa5b166067244886af0f6fee6597,
     type: 3}
   _parent: {fileID: 3474531605136814823}
+--- !u!114 &6234201665619887320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809634894560905355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 40c5da1906ace4b4dadd389f073b86fb, type: 2}

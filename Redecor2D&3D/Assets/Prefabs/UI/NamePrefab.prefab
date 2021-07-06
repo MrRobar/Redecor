@@ -388,5 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selectedID: {fileID: 11400000, guid: 695c3791abcbd904a80acc8d4d90aaa9, type: 2}
+  _cellInfo: {fileID: 0}
   _id: 0
   _thisButton: {fileID: 5177799905198984827}
+  _nameText: {fileID: 2161345248620923771}
