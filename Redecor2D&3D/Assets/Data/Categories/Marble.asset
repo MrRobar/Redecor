@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: Marble
   m_EditorClassIdentifier: 
   categoryName: Marble
-  subCategoriesAmount: 1
+  subCategoriesAmount: 2
+  subCategories:
+  - subCategoryName: Marble1
+    infoToLoad:
+    - {fileID: 11400000, guid: 16092c6d06c625c4dad3151d65711770, type: 2}
+    - {fileID: 11400000, guid: d524b513a852cc54d97182c76ba0fd6a, type: 2}
+  - subCategoryName: Marble2
+    infoToLoad:
+    - {fileID: 11400000, guid: 633ee81f29916a240925887a6c97a85b, type: 2}

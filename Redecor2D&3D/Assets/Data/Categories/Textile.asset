@@ -13,4 +13,23 @@ MonoBehaviour:
   m_Name: Textile
   m_EditorClassIdentifier: 
   categoryName: Textile
-  subCategoriesAmount: 1
+  subCategoriesAmount: 3
+  subCategories:
+  - subCategoryName: Textille1
+    infoToLoad:
+    - {fileID: 11400000, guid: ca6caaae34040ae46aa5c849d57b55e2, type: 2}
+    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
+    - {fileID: 11400000, guid: fd8adedaa12cab84090e32e89bf14b65, type: 2}
+    - {fileID: 11400000, guid: d404799e44a325e4c847d2a5f83867de, type: 2}
+  - subCategoryName: Textille2
+    infoToLoad:
+    - {fileID: 11400000, guid: a9b4a7b838135d546bb14c69fb4ae120, type: 2}
+    - {fileID: 11400000, guid: d21ceded3a0e7aa46b7124185f910faa, type: 2}
+    - {fileID: 11400000, guid: eda96e52228ebf64895eb02b5cad1e4e, type: 2}
+    - {fileID: 11400000, guid: 5032de864b6f52545b63c77cb6a1ec4e, type: 2}
+  - subCategoryName: Textille3
+    infoToLoad:
+    - {fileID: 11400000, guid: dfeab266198588042b33df5d1a954889, type: 2}
+    - {fileID: 11400000, guid: ed3a7aa438584574e886c68f9bba4e3d, type: 2}
+    - {fileID: 11400000, guid: f28c9feee02b1dc4388fb9d3e6d45e7f, type: 2}
+    - {fileID: 11400000, guid: e8d1a0a622ca29d4ea79b8a5a6c4df43, type: 2}

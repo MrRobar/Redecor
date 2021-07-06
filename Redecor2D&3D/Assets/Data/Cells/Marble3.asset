@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f2de4699de4963439a668ac4198ff92, type: 3}
-  m_Name: Carpet_Light_Pink
+  m_Name: Marble3
   m_EditorClassIdentifier: 
-  spriteToShow: {fileID: 21300000, guid: f4423b39f77188747b7af915f4abe2be, type: 3}
-  spriteToSet: {fileID: 21300000, guid: d29929daba2fa6b44a5cc6f0f1ecb8e3, type: 3}
+  spriteToShow: {fileID: 21300000, guid: 8db1200218f3bec4d9184c0b8e008923, type: 3}
+  spriteToSet: {fileID: 21300000, guid: 4c9d8e8a541941a47b9b1654abb32c9d, type: 3}
   spriteBlocked: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  cost: 1000
-  amount: 4
-  matName: Light Pink
-  categoryName: Textille
+  cost: 2000
+  amount: 0
+  matName: Cipollin Bordo
+  categoryName: Marble

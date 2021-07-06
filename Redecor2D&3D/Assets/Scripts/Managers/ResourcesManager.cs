@@ -31,9 +31,6 @@ namespace Game.Managers
         private Transform _materialsKeeperPrefab;
 
         [SerializeField]
-        private Transform _subCategoryPrefab;
-
-        [SerializeField]
         private Transform _namePrefab;
 
         [SerializeField]
@@ -113,7 +110,7 @@ namespace Game.Managers
             _lateUpdateEventListener.OnEventHappened += SetNearestID;
             _lateUpdateEventListener.OnEventHappened += CheckForEqualIndex;
             _lateUpdateEventListener.OnEventHappened += EditNameState;
-            _lateUpdateEventListener.OnEventHappened += ResetScroll;
+            //_lateUpdateEventListener.OnEventHappened += ResetScroll;
             _updateMaterialsContentEventListener.OnEventHappened += ResetMaterialsContentPos;
         }
 
@@ -122,7 +119,7 @@ namespace Game.Managers
             _lateUpdateEventListener.OnEventHappened -= SetNearestID;
             _lateUpdateEventListener.OnEventHappened -= CheckForEqualIndex;
             _lateUpdateEventListener.OnEventHappened -= EditNameState;
-            _lateUpdateEventListener.OnEventHappened -= ResetScroll;
+            //_lateUpdateEventListener.OnEventHappened -= ResetScroll;
             _updateMaterialsContentEventListener.OnEventHappened -= ResetMaterialsContentPos;
         }
 
@@ -143,7 +140,7 @@ namespace Game.Managers
                     nearestPos = namesDistance;
                     _selectedID.data = i;
                 }
-                else if(materialsDistance < nearestPos && _isScrollingViaNames == false)
+                if(materialsDistance < nearestPos && _isScrollingViaNames == false)
                 {
                     nearestPos = materialsDistance;
                     _selectedID.data = i;

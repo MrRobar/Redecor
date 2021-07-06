@@ -41,6 +41,7 @@ namespace Game.UI
         {
             for (int i = 0; i < _infoToLoad.Count; i++)
             {
+                Debug.Log(transform.name + i + "  " + _infoToLoad.Count);
                 var material = Instantiate(_materialPrefab, _parent);
                 material.GetComponent<MaterialVariant>().ThisInfo = _infoToLoad[i];
             }

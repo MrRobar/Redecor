@@ -16,6 +16,11 @@ MonoBehaviour:
   subCategoriesAmount: 2
   subCategories:
   - subCategoryName: Wood1
-    infoToLoad: []
+    infoToLoad:
+    - {fileID: 11400000, guid: ca6caaae34040ae46aa5c849d57b55e2, type: 2}
+    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
   - subCategoryName: Wood2
-    infoToLoad: []
+    infoToLoad:
+    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
+    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
+    - {fileID: 11400000, guid: d404799e44a325e4c847d2a5f83867de, type: 2}

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f2de4699de4963439a668ac4198ff92, type: 3}
-  m_Name: Carpet_Light_Pink
+  m_Name: Marble1
   m_EditorClassIdentifier: 
-  spriteToShow: {fileID: 21300000, guid: f4423b39f77188747b7af915f4abe2be, type: 3}
-  spriteToSet: {fileID: 21300000, guid: d29929daba2fa6b44a5cc6f0f1ecb8e3, type: 3}
+  spriteToShow: {fileID: 21300000, guid: 0a14d0d3045a894489d7f141dc298332, type: 3}
+  spriteToSet: {fileID: 21300000, guid: 8f207496d4154454d95d849245e29cd1, type: 3}
   spriteBlocked: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  cost: 1000
-  amount: 4
-  matName: Light Pink
-  categoryName: Textille
+  cost: 5000
+  amount: 2
+  matName: Carrara Pink
+  categoryName: Marble

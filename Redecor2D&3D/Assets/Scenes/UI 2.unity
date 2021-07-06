@@ -2613,19 +2613,17 @@ MonoBehaviour:
   categoriesNames:
   - Ceramic
   - Glass
-  - Leather
-  - Marble
-  - Metal
-  - Textile
   - Wood
+  - Marble
+  - Textile
+  - Metal
   categories:
   - {fileID: 11400000, guid: 36d4793b03dae1146a8be54fcab6f7d1, type: 2}
   - {fileID: 11400000, guid: 6038a657b72033b43bd0091e6bc96751, type: 2}
-  - {fileID: 11400000, guid: edd9d6b1fd6b6e14b94cab75d1dc4c4c, type: 2}
-  - {fileID: 11400000, guid: 27a0ca44e80663c428e8f4e186037853, type: 2}
-  - {fileID: 11400000, guid: 02b13c3719bbb354281a5fa195cfcf22, type: 2}
-  - {fileID: 11400000, guid: de54c9eb0bdd90f46a95b2dc86a2af9d, type: 2}
   - {fileID: 11400000, guid: c9246b4eece92954a8e9a9c85ab7cd41, type: 2}
+  - {fileID: 11400000, guid: 27a0ca44e80663c428e8f4e186037853, type: 2}
+  - {fileID: 11400000, guid: de54c9eb0bdd90f46a95b2dc86a2af9d, type: 2}
+  - {fileID: 11400000, guid: 02b13c3719bbb354281a5fa195cfcf22, type: 2}
 --- !u!1 &284523043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,7 +4627,7 @@ MonoBehaviour:
   _materialsContent: {fileID: 1789938440}
   _empty: {fileID: 8220251208297016879, guid: ce9b5dfd571ce3144a02fb6c5c833d5b, type: 3}
   _columns: 5
-  _snapSpeed: 10
+  _snapSpeed: 16
   _namesOffset: 0
   _isScrollingViaNames: 1
 --- !u!114 &842859170
@@ -8540,7 +8538,6 @@ GameObject:
   - component: {fileID: 1789938440}
   - component: {fileID: 1789938442}
   - component: {fileID: 1789938441}
-  - component: {fileID: 1789938443}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -8606,49 +8603,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
---- !u!114 &1789938443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789938439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 13
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 842859169}
-          m_MethodName: SetScrollBool
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 14
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 842859169}
-          m_MethodName: SetScrollBool
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1794553063
 GameObject:
   m_ObjectHideFlags: 0
@@ -9827,7 +9781,6 @@ GameObject:
   - component: {fileID: 2117391882}
   - component: {fileID: 2117391883}
   - component: {fileID: 2117391884}
-  - component: {fileID: 2117391885}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -9851,7 +9804,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000002044208, y: -37.000034}
+  m_AnchoredPosition: {x: 0.0000002044208, y: -37.00003}
   m_SizeDelta: {x: 0, y: 74}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2117391883
@@ -9893,46 +9846,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
---- !u!114 &2117391885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117391881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 13
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 842859169}
-          m_MethodName: SetScrollBool
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 14
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 842859169}
-          m_MethodName: SetScrollBool
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
