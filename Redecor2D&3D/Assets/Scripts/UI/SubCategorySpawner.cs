@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+using ScriptableValues;
+using System.Collections;
+using Events;
+using TMPro;
 
 namespace Game.UI
 {
@@ -7,7 +11,7 @@ namespace Game.UI
     {
 
         [SerializeField]
-        private int _subCategoriesAmount;
+        private EventDispatcher _spawnedCategoriesDispatcher;
 
         [SerializeField]
         private Transform _subCategory;
@@ -15,12 +19,30 @@ namespace Game.UI
         [SerializeField]
         private Transform _parent;
 
+        [SerializeField]
+        private ScriptableCategory _categoryData;
+
+        public ScriptableCategory CategoryData
+        {
+            get { return _categoryData; }
+            set { _categoryData = value; }
+        }
+
         private void OnEnable()
         {
-            for (int i = 0; i < _subCategoriesAmount; i++)
+            StartCoroutine(SpawnCategories());
+        }
+
+        private IEnumerator SpawnCategories()
+        {
+            yield return new WaitForSeconds(0.001f);
+            for (int i = 0; i < _categoryData.subCategoriesAmount; i++)
             {
-                Instantiate(_subCategory, _parent);
+                var go = Instantiate(_subCategory, _parent);
+                go.GetComponent<SubCategoryLoader>().InfoToLoad = _categoryData.subCategories[i].infoToLoad;
+                go.GetChild(1).GetComponent<TextMeshProUGUI>().text = _categoryData.subCategories[i].subCategoryName;
             }
+            _spawnedCategoriesDispatcher.Dispatch();
         }
     }
 }
