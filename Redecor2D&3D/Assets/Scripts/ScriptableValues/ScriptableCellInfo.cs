@@ -18,6 +18,8 @@ namespace ScriptableValues
         public int amount;
 
         public string matName;
+
+        public string categoryName;
     }
 }
 
