@@ -47,7 +47,6 @@ namespace Game.Managers
                 {
                     _spriteToChange.data = hit.collider.GetComponent<SpriteRenderer>();
                     hit.collider.GetComponent<ChoseThroughObject>().UpdateUI();
-                    Debug.Log(hit.collider.name);
                 }
             }
         }
