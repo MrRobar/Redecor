@@ -608,10 +608,10 @@ GameObject:
   - component: {fileID: 8841811166176573609}
   - component: {fileID: 8841811166176573610}
   - component: {fileID: 8841811166176573611}
-  - component: {fileID: 6805891688947982361}
-  - component: {fileID: 9139204101865655820}
+  - component: {fileID: 6102543456418944405}
+  - component: {fileID: 4037833562330638455}
   m_Layer: 5
-  m_Name: MaterialsKeeper
+  m_Name: CategoryKeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6805891688947982361
+--- !u!114 &6102543456418944405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -718,12 +718,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4510239de384f4fbfbd6199ffc7582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnedCategoriesDispatcher: {fileID: 9139204101865655820}
+  _spawnedCategoriesDispatcher: {fileID: 4037833562330638455}
   _subCategory: {fileID: 6809634894560905356, guid: ed23b271286bdb541ab32e3fb304b35a,
     type: 3}
   _parent: {fileID: 8841811164813063119}
   _categoryData: {fileID: 0}
---- !u!114 &9139204101865655820
+--- !u!114 &4037833562330638455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c6039ccd6867140b43384375be12fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _someEvent: {fileID: 11400000, guid: 40c5da1906ace4b4dadd389f073b86fb, type: 2}
+  _someEvent: {fileID: 11400000, guid: f00d3d467dee64a439ce5ffc9354fc62, type: 2}
 --- !u!1 &8841811166275944750
 GameObject:
   m_ObjectHideFlags: 0
