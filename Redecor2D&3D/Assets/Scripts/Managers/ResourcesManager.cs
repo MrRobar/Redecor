@@ -16,7 +16,10 @@ namespace Game.Managers
         private EventListener _lateUpdateEventListener;
 
         [SerializeField]
-        private EventListener _updateMaterialsContentEventListener;
+        private EventListener _subCategoriesSpawned;
+
+        [SerializeField]
+        private EventListener _spawnCategoriesEventListener;
 
         [SerializeField]
         private ScriptableIntValue _selectedID;
@@ -25,7 +28,7 @@ namespace Game.Managers
         private ScriptableBool _isScrolling;
 
         [SerializeField]
-        private DataLoader _dataLoader;
+        private DataKeeper _dataKeeper;
 
         [SerializeField]
         private Transform _materialsKeeperPrefab;
@@ -59,79 +62,107 @@ namespace Game.Managers
 
         private Vector2 _namesContentVector;
         private Vector2 _materialsContentVector;
-
-        [SerializeField]
-        private int _columns;
         
         [SerializeField]
         private int _snapSpeed;
 
         [SerializeField]
-        private int _namesOffset = 80;
-
-        [SerializeField]
         private bool _isScrollingViaNames = true;
 
-        private void Awake()
+        private void OnEnable()
         {
-            _namesPositions = new Vector2[_columns];
-            _materialsPositions = new Vector2[_columns];
+            _spawnCategoriesEventListener.OnEventHappened += LoadCategories;
+            _subCategoriesSpawned.OnEventHappened += ResetMaterialsContentPos;
+            LateUpdateSubscribeToEvents();
+        }
 
-            for (int i = 0; i < _columns; i++)
+        private void OnDisable()
+        {
+            _spawnCategoriesEventListener.OnEventHappened -= LoadCategories;
+            _subCategoriesSpawned.OnEventHappened -= ResetMaterialsContentPos;
+            LateUpdateUnSubscribeToEvent();
+        }
+
+        private void LateUpdateSubscribeToEvents()
+        {
+            _lateUpdateEventListener.OnEventHappened += SetNearestID;
+            _lateUpdateEventListener.OnEventHappened += CheckForEqualIndex;
+            _lateUpdateEventListener.OnEventHappened += EditNameState;
+            _lateUpdateEventListener.OnEventHappened += ResetScroll;
+        }
+
+        private void LateUpdateUnSubscribeToEvent()
+        {
+            _lateUpdateEventListener.OnEventHappened -= SetNearestID;
+            _lateUpdateEventListener.OnEventHappened -= CheckForEqualIndex;
+            _lateUpdateEventListener.OnEventHappened -= EditNameState;
+            _lateUpdateEventListener.OnEventHappened -= ResetScroll;
+        }
+
+        private void LoadCategories()
+        {
+            if(_namesParent.childCount != 0 || _materialsParent.childCount != 0)
+            {
+                foreach(Transform go in _namesParent)
+                {
+                    Destroy(go.gameObject);
+                }
+
+                foreach (Transform go in _materialsParent)
+                {
+                    Destroy(go.gameObject);
+                }
+                _namesList.Clear();
+                _keepersList.Clear();
+            }
+
+            _namesPositions = new Vector2[_dataKeeper.categories.Count];
+            _materialsPositions = new Vector2[_dataKeeper.categories.Count];
+
+            for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
                 var keeper = Instantiate(_materialsKeeperPrefab, _materialsParent);
                 var name = Instantiate(_namePrefab, _namesParent);
                 _keepersList.Add(keeper);
                 _namesList.Add(name);
-                
+
                 if (i == 0)
                 {
                     continue;
                 }
 
                 keeper.localPosition = new Vector2(_keepersList[i - 1].localPosition.x + _materialsKeeperPrefab.GetComponent<RectTransform>().sizeDelta.x, _keepersList[i].localPosition.y);
-                name.localPosition = new Vector2(_namesList[i - 1].localPosition.x + _namePrefab.GetComponent<RectTransform>().sizeDelta.x + _namesOffset, _namesList[i].localPosition.y);
+                name.localPosition = new Vector2(_namesList[i - 1].localPosition.x + _namePrefab.GetComponent<RectTransform>().sizeDelta.x, _namesList[i].localPosition.y);
                 name.GetComponent<ButtonName>().ID = i;
                 _namesPositions[i] = -_namesList[i].transform.localPosition;
                 _materialsPositions[i] = -_keepersList[i].transform.localPosition;
             }
-            for (int i = 0; i < _columns; i++)
+            for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
-                _namesList[i].GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = _dataLoader.categoriesNames[i];
-                _keepersList[i].GetComponent<SubCategorySpawner>().CategoryData = _dataLoader.categories[i];
+                _keepersList[i].GetComponent<SubCategorySpawner>().CategoryData = _dataKeeper.categories[i];
+                _keepersList[i].GetComponent<SubCategorySpawner>().SpawnCategories();
+                _namesList[i].GetComponent<ButtonName>().SetData(_dataKeeper.categoriesNames[i]);
             }
             Instantiate(_empty, _namesParent);
             Instantiate(_empty, _materialsParent);
-
-        }
-
-        private void OnEnable()
-        {
-            _lateUpdateEventListener.OnEventHappened += SetNearestID;
-            _lateUpdateEventListener.OnEventHappened += CheckForEqualIndex;
-            _lateUpdateEventListener.OnEventHappened += EditNameState;
-            //_lateUpdateEventListener.OnEventHappened += ResetScroll;
-            _updateMaterialsContentEventListener.OnEventHappened += ResetMaterialsContentPos;
-        }
-
-        private void OnDisable()
-        {
-            _lateUpdateEventListener.OnEventHappened -= SetNearestID;
-            _lateUpdateEventListener.OnEventHappened -= CheckForEqualIndex;
-            _lateUpdateEventListener.OnEventHappened -= EditNameState;
-            //_lateUpdateEventListener.OnEventHappened -= ResetScroll;
-            _updateMaterialsContentEventListener.OnEventHappened -= ResetMaterialsContentPos;
         }
 
         private void ResetMaterialsContentPos()
         {
+            Debug.Log("Content pos reseted");
             StartCoroutine(ResetContentPos());
+            
         }
 
         private void SetNearestID() 
         {
+            if(_dataKeeper.categories.Count == 0 || _dataKeeper.categoriesNames.Count == 0)
+            {
+                return;
+            }
+
             float nearestPos = float.MaxValue;
-            for (int i = 0; i < _columns; i++)
+            for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
                 float namesDistance = Mathf.Abs(_namesContent.anchoredPosition.x - _namesPositions[i].x);
                 float materialsDistance = Mathf.Abs(_materialsContent.anchoredPosition.x - _materialsPositions[i].x);
@@ -150,7 +181,12 @@ namespace Game.Managers
 
         private void CheckForEqualIndex()
         {
-            for (int i = 0; i < _columns; i++)
+            //if (_dataKeeper.categories.Count == 0 || _dataKeeper.categoriesNames.Count == 0)
+            //{
+            //    return;
+            //}
+
+            for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
                 if(i == _selectedID.data)
                 {
@@ -178,7 +214,12 @@ namespace Game.Managers
 
         private void EditNameState()
         {
-            for (int i = 0; i < _columns; i++)
+            if (_dataKeeper.categories.Count == 0 || _dataKeeper.categoriesNames.Count == 0 || _namesList.Count == 0)
+            {
+                return;
+            }
+
+            for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
                 _namesList[i].transform.GetChild(0).gameObject.SetActive(false);
                 _namesList[i].transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0.4f, 0.4f, 0.4f);
@@ -206,7 +247,7 @@ namespace Game.Managers
         private IEnumerator ResetContentPos()
         {
             yield return new WaitForSeconds(0.001f);
-            for (int i = 0; i < _columns; i++)
+            for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
                 _keepersList[i].GetChild(0).GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -368.5f);
             }

@@ -1,6 +1,4 @@
-﻿using Events;
-using Game.UI;
-using UnityEngine;
+﻿using UnityEngine;
 using ScriptableValues;
 using System.Collections.Generic;
 
@@ -10,23 +8,20 @@ namespace Game.Managers
     {
 
         [SerializeField]
-        private Transform _texturesPanel;
+        private DataKeeper _dataKeeper;
 
         [SerializeField]
-        private EventDispatcher _updateTexturePanelDispatcher;
-
-        [SerializeField]
-        private EventDispatcher _setDataToCellDispatcher;
-
-
-        [SerializeField]
-        private List<ScriptableCellInfo> _cellsInfo;
+        private List<ScriptableCategory> _categories;
 
         public void SendSprites()
         {
-            _texturesPanel.GetComponent<TexturePanel>().CellsInfo = _cellsInfo;
-            _updateTexturePanelDispatcher.Dispatch();
-            _setDataToCellDispatcher.Dispatch();
+            _dataKeeper.categories = _categories;
+            _dataKeeper.categoriesNames.Clear();
+            for (int i = 0; i < _categories.Count; i++)
+            {
+                _dataKeeper.categoriesNames.Add(_categories[i].categoryName);
+            }
+            _dataKeeper.DispatchEvent();
         }
     }
 }

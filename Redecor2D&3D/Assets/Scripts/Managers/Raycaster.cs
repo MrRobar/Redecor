@@ -40,7 +40,6 @@ namespace Game.Managers
                 {
                     return;
                 }
-
                 Vector3 worldPoint = thisCamera.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
                 if (hit.collider != null)

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using ScriptableValues;
-using System.Collections;
 using Events;
 using TMPro;
 
@@ -28,14 +27,8 @@ namespace Game.UI
             set { _categoryData = value; }
         }
 
-        private void OnEnable()
+        public void SpawnCategories()
         {
-            StartCoroutine(SpawnCategories());
-        }
-
-        private IEnumerator SpawnCategories()
-        {
-            yield return new WaitForSeconds(0.001f);
             for (int i = 0; i < _categoryData.subCategoriesAmount; i++)
             {
                 var go = Instantiate(_subCategory, _parent);

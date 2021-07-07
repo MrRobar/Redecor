@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 namespace Game.UI
 {
-
     public class MaterialVariant : MonoBehaviour
     {
 
@@ -30,7 +29,6 @@ namespace Game.UI
         public void SetSpriteToObject()
         {
             _objectToChange.data.sprite = _thisInfo.spriteToSet;
-            Debug.Log("Sprite set");
         }
 
         IEnumerator LoadData()

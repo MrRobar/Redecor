@@ -13,9 +13,6 @@ namespace Game.UI
         private ScriptableIntValue _selectedID;
 
         [SerializeField]
-        private ScriptableCellInfo _cellInfo;
-
-        [SerializeField]
         private int _id;
 
         [SerializeField]
@@ -30,26 +27,14 @@ namespace Game.UI
             set { _id = value; }
         }
 
-        public ScriptableCellInfo CellInfo
-        {
-            get { return _cellInfo; }
-            set { _cellInfo = value; }
-        }
-
-        private void OnEnable()
-        {
-            //StartCoroutine(SetData());
-        }
-
         public void SetID()
         {
             _selectedID.data = _id;
         }
 
-        private IEnumerator SetData()
+        public void SetData(string buttonName)
         {
-            yield return new WaitForSeconds(0.001f);
-            _nameText.text = _cellInfo.categoryName;
+            _nameText.text = buttonName;
         }
     }
 }

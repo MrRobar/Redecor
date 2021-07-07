@@ -13,7 +13,7 @@ namespace Game.UI
         private List<ScriptableCellInfo> _infoToLoad = new List<ScriptableCellInfo>();
 
         [SerializeField]
-        private EventListener _spawnedCategoriesEventListener;
+        private EventListener _spawnSubCategoriesEventListener;
 
         [SerializeField]
         private Transform _materialPrefab;
@@ -29,19 +29,18 @@ namespace Game.UI
 
         private void OnEnable()
         {
-            _spawnedCategoriesEventListener.OnEventHappened += InitializeData;
+            _spawnSubCategoriesEventListener.OnEventHappened += InitializeData;
         }
 
         private void OnDisable()
         {
-            _spawnedCategoriesEventListener.OnEventHappened -= InitializeData;
+            _spawnSubCategoriesEventListener.OnEventHappened -= InitializeData;
         }
 
         private void InitializeData()
         {
             for (int i = 0; i < _infoToLoad.Count; i++)
             {
-                Debug.Log(transform.name + i + "  " + _infoToLoad.Count);
                 var material = Instantiate(_materialPrefab, _parent);
                 material.GetComponent<MaterialVariant>().ThisInfo = _infoToLoad[i];
             }
