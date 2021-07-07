@@ -202,8 +202,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6809634894560905356}
-  - component: {fileID: 5490289555040234410}
-  - component: {fileID: 6234201665619887320}
+  - component: {fileID: 6701635800448477060}
+  - component: {fileID: 43880022481288005}
   m_Layer: 5
   m_Name: SubCategory
   m_TagString: Untagged
@@ -232,7 +232,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5490289555040234410
+--- !u!114 &6701635800448477060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,11 +245,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _infoToLoad: []
-  _spawnedCategoriesEventListener: {fileID: 6234201665619887320}
+  _spawnSubCategoriesEventListener: {fileID: 43880022481288005}
   _materialPrefab: {fileID: 8562116396387416771, guid: 94a4aa5b166067244886af0f6fee6597,
     type: 3}
   _parent: {fileID: 3474531605136814823}
---- !u!114 &6234201665619887320
+--- !u!114 &43880022481288005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,4 +261,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _someEvent: {fileID: 11400000, guid: 40c5da1906ace4b4dadd389f073b86fb, type: 2}
+  _someEvent: {fileID: 11400000, guid: f00d3d467dee64a439ce5ffc9354fc62, type: 2}

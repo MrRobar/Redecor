@@ -118,7 +118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1832497601878065712}
+      - m_Target: {fileID: 5822404869880698684}
         m_MethodName: SetSpriteToObject
         m_Mode: 1
         m_Arguments:
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8562116396387416771}
   - component: {fileID: 3373549202036082067}
   - component: {fileID: 8710991776326904611}
-  - component: {fileID: 1832497601878065712}
+  - component: {fileID: 5822404869880698684}
   m_Layer: 5
   m_Name: MaterialSlotNew
   m_TagString: Untagged
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1832497601878065712
+--- !u!114 &5822404869880698684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

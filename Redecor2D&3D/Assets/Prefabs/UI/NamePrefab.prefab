@@ -118,18 +118,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9065217134209923640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8189066069719873207}
-        m_MethodName: SetID
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &3376394999548669573
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +377,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selectedID: {fileID: 11400000, guid: 695c3791abcbd904a80acc8d4d90aaa9, type: 2}
-  _cellInfo: {fileID: 0}
   _id: 0
   _thisButton: {fileID: 5177799905198984827}
   _nameText: {fileID: 2161345248620923771}
