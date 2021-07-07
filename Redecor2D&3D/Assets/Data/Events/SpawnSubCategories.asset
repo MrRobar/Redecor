@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65169774a8b669d44a3b01b15b2caaad, type: 3}
-  m_Name: SetDataToCell
+  m_Name: SpawnSubCategories
   m_EditorClassIdentifier: 
