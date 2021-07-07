@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1916549814}
+  _spriteSender: {fileID: 1916549813}
 --- !u!60 &20029979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -683,6 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 197932376}
+  _spriteSender: {fileID: 197932375}
 --- !u!60 &42781095
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -942,6 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 284523049}
+  _spriteSender: {fileID: 284523048}
 --- !u!1 &79327497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1705758215}
+  _spriteSender: {fileID: 1705758214}
 --- !u!1 &163609787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,10 +1677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories:
+  - {fileID: 11400000, guid: 02b13c3719bbb354281a5fa195cfcf22, type: 2}
 --- !u!114 &170119289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1943,6 +1946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 170119289}
+  _spriteSender: {fileID: 170119288}
 --- !u!1 &188599449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,10 +2079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories: []
 --- !u!114 &188599455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2232,10 +2234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories:
+  - {fileID: 11400000, guid: 6038a657b72033b43bd0091e6bc96751, type: 2}
+  - {fileID: 11400000, guid: c9246b4eece92954a8e9a9c85ab7cd41, type: 2}
 --- !u!114 &197932376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2418,6 +2420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1908651775}
+  _spriteSender: {fileID: 1908651774}
 --- !u!1 &236064214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,9 +2510,10 @@ GameObject:
   - component: {fileID: 242191306}
   - component: {fileID: 242191305}
   - component: {fileID: 242191308}
-  - component: {fileID: 242191310}
   - component: {fileID: 242191309}
+  - component: {fileID: 242191310}
   - component: {fileID: 242191311}
+  - component: {fileID: 242191312}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2552,7 +2556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242191304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 622.95215, y: 189.80983, z: -65.14462}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2610,20 +2614,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9689789043d12741aac2d567edbd995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  categoriesNames:
-  - Ceramic
-  - Glass
-  - Wood
-  - Marble
-  - Textile
-  - Metal
-  categories:
-  - {fileID: 11400000, guid: 36d4793b03dae1146a8be54fcab6f7d1, type: 2}
-  - {fileID: 11400000, guid: 6038a657b72033b43bd0091e6bc96751, type: 2}
-  - {fileID: 11400000, guid: c9246b4eece92954a8e9a9c85ab7cd41, type: 2}
-  - {fileID: 11400000, guid: 27a0ca44e80663c428e8f4e186037853, type: 2}
-  - {fileID: 11400000, guid: de54c9eb0bdd90f46a95b2dc86a2af9d, type: 2}
-  - {fileID: 11400000, guid: 02b13c3719bbb354281a5fa195cfcf22, type: 2}
+  categoriesNames: []
+  categories: []
+  _spawnCategoriesDispatcher: {fileID: 242191312}
+--- !u!114 &242191312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242191304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c6039ccd6867140b43384375be12fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 7d724ccd2419c0a439476aab42bb656c, type: 2}
 --- !u!1 &284523043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,10 +2762,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories:
+  - {fileID: 11400000, guid: de54c9eb0bdd90f46a95b2dc86a2af9d, type: 2}
 --- !u!114 &284523049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2913,10 +2918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories:
+  - {fileID: 11400000, guid: c9246b4eece92954a8e9a9c85ab7cd41, type: 2}
 --- !u!114 &389346955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3486,6 +3490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1309280990}
+  _spriteSender: {fileID: 1309280989}
 --- !u!1 &483041333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,6 +3910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1997827553}
+  _spriteSender: {fileID: 1997827552}
 --- !u!1 &589280825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4567,6 +4573,7 @@ GameObject:
   - component: {fileID: 842859170}
   - component: {fileID: 842859169}
   - component: {fileID: 842859173}
+  - component: {fileID: 842859174}
   m_Layer: 5
   m_Name: MaterialsPanel
   m_TagString: Untagged
@@ -4609,13 +4616,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lateUpdateEventListener: {fileID: 842859170}
-  _updateMaterialsContentEventListener: {fileID: 842859173}
+  _subCategoriesSpawned: {fileID: 842859173}
+  _spawnCategoriesEventListener: {fileID: 842859174}
   _selectedID: {fileID: 11400000, guid: 695c3791abcbd904a80acc8d4d90aaa9, type: 2}
   _isScrolling: {fileID: 11400000, guid: ba1936b04c9e7964ea6518c20376b636, type: 2}
-  _dataLoader: {fileID: 242191311}
+  _dataKeeper: {fileID: 242191311}
   _materialsKeeperPrefab: {fileID: 8841811166176573620, guid: 0ca6cc2bac1a376438d90efcff2b0754,
-    type: 3}
-  _subCategoryPrefab: {fileID: 6809634894560905356, guid: ed23b271286bdb541ab32e3fb304b35a,
     type: 3}
   _namePrefab: {fileID: 8220251208297016879, guid: 554f0fb9cd2161643b501237eb821a2a,
     type: 3}
@@ -4626,7 +4632,6 @@ MonoBehaviour:
   _namesContent: {fileID: 2117391882}
   _materialsContent: {fileID: 1789938440}
   _empty: {fileID: 8220251208297016879, guid: ce9b5dfd571ce3144a02fb6c5c833d5b, type: 3}
-  _columns: 5
   _snapSpeed: 16
   _namesOffset: 0
   _isScrollingViaNames: 1
@@ -4693,6 +4698,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _someEvent: {fileID: 11400000, guid: 40c5da1906ace4b4dadd389f073b86fb, type: 2}
+--- !u!114 &842859174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842859167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 7d724ccd2419c0a439476aab42bb656c, type: 2}
 --- !u!1 &901394045
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,6 +4954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1579531869}
+  _spriteSender: {fileID: 1579531868}
 --- !u!1 &938867651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,10 +5619,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories:
+  - {fileID: 11400000, guid: 6038a657b72033b43bd0091e6bc96751, type: 2}
+  - {fileID: 11400000, guid: c9246b4eece92954a8e9a9c85ab7cd41, type: 2}
 --- !u!114 &996162067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5706,7 +5725,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1173991872}
   m_HandleRect: {fileID: 1173991871}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5990,6 +6009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 389346955}
+  _spriteSender: {fileID: 389346954}
 --- !u!1 &1173991870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6192,6 +6212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 996162067}
+  _spriteSender: {fileID: 996162066}
 --- !u!60 &1196479077
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6658,10 +6679,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories:
+  - {fileID: 11400000, guid: 36d4793b03dae1146a8be54fcab6f7d1, type: 2}
+  - {fileID: 11400000, guid: 6038a657b72033b43bd0091e6bc96751, type: 2}
 --- !u!114 &1309280990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7200,6 +7221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1758833919}
+  _spriteSender: {fileID: 1758833918}
 --- !u!1 &1486994534
 GameObject:
   m_ObjectHideFlags: 0
@@ -7607,10 +7629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories: []
 --- !u!114 &1570343387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7764,10 +7784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories: []
 --- !u!114 &1579531869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8103,10 +8121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories:
+  - {fileID: 11400000, guid: de54c9eb0bdd90f46a95b2dc86a2af9d, type: 2}
+  - {fileID: 11400000, guid: 36d4793b03dae1146a8be54fcab6f7d1, type: 2}
 --- !u!114 &1705758215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8138,8 +8156,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1710364110}
   - component: {fileID: 1710364111}
-  - component: {fileID: 1710364115}
-  - component: {fileID: 1710364114}
   - component: {fileID: 1710364113}
   - component: {fileID: 1710364112}
   m_Layer: 5
@@ -8236,32 +8252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _someEvent: {fileID: 11400000, guid: 653046b903f2f77449a04966d614cc6b, type: 2}
---- !u!114 &1710364114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710364109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _someEvent: {fileID: 11400000, guid: 6a7a6a7d39aca8d409d187f4340b2759, type: 2}
---- !u!114 &1710364115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710364109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c6039ccd6867140b43384375be12fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _someEvent: {fileID: 11400000, guid: 6a7a6a7d39aca8d409d187f4340b2759, type: 2}
 --- !u!1 &1758833913
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,10 +8384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories: []
 --- !u!114 &1758833919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8983,6 +8971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 188599455}
+  _spriteSender: {fileID: 188599454}
 --- !u!1 &1807428724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9270,10 +9259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories: []
 --- !u!114 &1908651775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9427,10 +9414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories: []
 --- !u!114 &1916549814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9580,6 +9565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1570343387}
+  _spriteSender: {fileID: 1570343386}
 --- !u!60 &1960737641
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9745,10 +9731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71870a24d9e45b5488effaf27947f8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texturesPanel: {fileID: 0}
-  _updateTexturePanelDispatcher: {fileID: 0}
-  _setDataToCellDispatcher: {fileID: 0}
-  _cellsInfo: []
+  _dataKeeper: {fileID: 242191311}
+  _categories: []
 --- !u!114 &1997827553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9804,7 +9788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000002044208, y: -37.00003}
+  m_AnchoredPosition: {x: 0.0000002044208, y: 0.000022888184}
   m_SizeDelta: {x: 0, y: 74}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2117391883
@@ -9825,7 +9809,7 @@ MonoBehaviour:
     m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 3
-  m_Spacing: 0
+  m_Spacing: 80
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
