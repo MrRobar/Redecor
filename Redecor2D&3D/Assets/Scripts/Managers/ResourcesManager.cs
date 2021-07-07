@@ -149,9 +149,7 @@ namespace Game.Managers
 
         private void ResetMaterialsContentPos()
         {
-            Debug.Log("Content pos reseted");
             StartCoroutine(ResetContentPos());
-            
         }
 
         private void SetNearestID() 
