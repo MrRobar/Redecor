@@ -4633,7 +4633,6 @@ MonoBehaviour:
   _materialsContent: {fileID: 1789938440}
   _empty: {fileID: 8220251208297016879, guid: ce9b5dfd571ce3144a02fb6c5c833d5b, type: 3}
   _snapSpeed: 16
-  _namesOffset: 0
   _isScrollingViaNames: 1
 --- !u!114 &842859170
 MonoBehaviour:
@@ -4697,7 +4696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _someEvent: {fileID: 11400000, guid: 40c5da1906ace4b4dadd389f073b86fb, type: 2}
+  _someEvent: {fileID: 11400000, guid: f00d3d467dee64a439ce5ffc9354fc62, type: 2}
 --- !u!114 &842859174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9788,7 +9787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000002044208, y: 0.000022888184}
+  m_AnchoredPosition: {x: 0.0000002044208, y: 36.99998}
   m_SizeDelta: {x: 0, y: 74}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2117391883
