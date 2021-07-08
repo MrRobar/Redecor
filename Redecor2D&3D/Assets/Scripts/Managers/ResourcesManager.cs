@@ -123,6 +123,7 @@ namespace Game.Managers
             {
                 var keeper = Instantiate(_materialsKeeperPrefab, _materialsParent);
                 var name = Instantiate(_namePrefab, _namesParent);
+                name.localPosition = new Vector3(0f, 0f, 0f);
                 _keepersList.Add(keeper);
                 _namesList.Add(name);
 
