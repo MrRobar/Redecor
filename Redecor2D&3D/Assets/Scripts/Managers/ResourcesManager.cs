@@ -180,11 +180,6 @@ namespace Game.Managers
 
         private void CheckForEqualIndex()
         {
-            //if (_dataKeeper.categories.Count == 0 || _dataKeeper.categoriesNames.Count == 0)
-            //{
-            //    return;
-            //}
-
             for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
                 if(i == _selectedID.data)
@@ -234,13 +229,15 @@ namespace Game.Managers
         {
             if (Input.GetMouseButtonUp(0))
             {
+                SetProperPack(_selectedID.data);
+                SetProperName(_selectedID.data);
                 _isScrollingViaNames = true;
             }
         }
-        
-        public void SetScrollBool(bool scrolling)
+
+        public void SetScrollViaNames(bool scroll)
         {
-            _isScrollingViaNames = scrolling;
+            _isScrollingViaNames = scroll;
         }
 
         private IEnumerator ResetContentPos()
