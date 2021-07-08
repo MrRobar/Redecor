@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Events;
 using ScriptableValues;
+using Game.Managers;
 
 namespace Game.UI
 {
@@ -15,6 +16,9 @@ namespace Game.UI
 
         [SerializeField]
         private ScriptableSpriteRenderer _rendererToSet;
+
+        [SerializeField]
+        private SpritesSender _spritesSender;
 
         [SerializeField]
         private SpriteRenderer _correspondingRenderer;
@@ -34,6 +38,7 @@ namespace Game.UI
         private void Awake()
         {
             _thisButton = GetComponent<Button>();
+            _spritesSender = GetComponent<SpritesSender>();
             _thisButton.onClick.AddListener(UpdateButtonSprite);
             _thisButton.onClick.AddListener(SetDataToSO);
         }
@@ -47,6 +52,7 @@ namespace Game.UI
         {
             _updateButtonsDispatcher.Dispatch();
             _buttonImage.sprite = _activeButtonSprite;
+            _spritesSender.SendSprites();
         }
 
 
