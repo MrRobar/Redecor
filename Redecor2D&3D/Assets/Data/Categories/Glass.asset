@@ -23,3 +23,4 @@ MonoBehaviour:
   - subCategoryName: Glass
     infoToLoad:
     - {fileID: 11400000, guid: 1eb2585d309456f41876836f03881b39, type: 2}
+    - {fileID: 11400000, guid: 0c03bb6319d9408469135c10b26aeabf, type: 2}

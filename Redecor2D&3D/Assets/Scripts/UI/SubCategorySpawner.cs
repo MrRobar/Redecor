@@ -36,6 +36,7 @@ namespace Game.UI
                 go.GetChild(1).GetComponent<TextMeshProUGUI>().text = _categoryData.subCategories[i].subCategoryName;
             }
             _spawnedCategoriesDispatcher.Dispatch();
+            
         }
     }
 }

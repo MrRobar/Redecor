@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryName: Metal
   subCategoriesAmount: 1
+  subCategories:
+  - subCategoryName: Metal1
+    infoToLoad:
+    - {fileID: 11400000, guid: 633ee81f29916a240925887a6c97a85b, type: 2}

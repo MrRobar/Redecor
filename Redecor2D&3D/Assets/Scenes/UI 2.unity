@@ -1694,6 +1694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 185415113}
   _thisButton: {fileID: 170119285}
   _buttonImage: {fileID: 170119286}
@@ -2095,6 +2096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 1794553065}
   _thisButton: {fileID: 188599451}
   _buttonImage: {fileID: 188599452}
@@ -2237,7 +2239,6 @@ MonoBehaviour:
   _dataKeeper: {fileID: 242191311}
   _categories:
   - {fileID: 11400000, guid: 6038a657b72033b43bd0091e6bc96751, type: 2}
-  - {fileID: 11400000, guid: c9246b4eece92954a8e9a9c85ab7cd41, type: 2}
 --- !u!114 &197932376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,6 +2253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 42781091}
   _thisButton: {fileID: 197932372}
   _buttonImage: {fileID: 197932373}
@@ -2779,6 +2781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 78852006}
   _thisButton: {fileID: 284523045}
   _buttonImage: {fileID: 284523046}
@@ -2935,6 +2938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 1171122078}
   _thisButton: {fileID: 389346951}
   _buttonImage: {fileID: 389346952}
@@ -5636,6 +5640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 1196479073}
   _thisButton: {fileID: 996162063}
   _buttonImage: {fileID: 996162064}
@@ -6697,6 +6702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 459675515}
   _thisButton: {fileID: 1309280986}
   _buttonImage: {fileID: 1309280987}
@@ -7645,6 +7651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 1960737637}
   _thisButton: {fileID: 1570343383}
   _buttonImage: {fileID: 1570343384}
@@ -7800,6 +7807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 904347713}
   _thisButton: {fileID: 1579531865}
   _buttonImage: {fileID: 1579531866}
@@ -8139,6 +8147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 156826921}
   _thisButton: {fileID: 1705758211}
   _buttonImage: {fileID: 1705758212}
@@ -8400,6 +8409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 1343341493}
   _thisButton: {fileID: 1758833915}
   _buttonImage: {fileID: 1758833916}
@@ -9275,6 +9285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 210300692}
   _thisButton: {fileID: 1908651771}
   _buttonImage: {fileID: 1908651772}
@@ -9430,6 +9441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 20029975}
   _thisButton: {fileID: 1916549810}
   _buttonImage: {fileID: 1916549811}
@@ -9747,6 +9759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateButtonsDispatcher: {fileID: 1710364111}
   _rendererToSet: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spritesSender: {fileID: 0}
   _correspondingRenderer: {fileID: 573267530}
   _thisButton: {fileID: 1997827549}
   _buttonImage: {fileID: 1997827550}
@@ -9788,7 +9801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000002044208, y: -37.00003}
+  m_AnchoredPosition: {x: 0.0000002044208, y: -0.000022888184}
   m_SizeDelta: {x: 0, y: 74}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2117391883

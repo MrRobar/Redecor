@@ -39,6 +39,7 @@ namespace Game.UI
 
         private void InitializeData()
         {
+            //Debug.Log("Data initialized on: " + this.gameObject.name);
             for (int i = 0; i < _infoToLoad.Count; i++)
             {
                 var material = Instantiate(_materialPrefab, _parent);
