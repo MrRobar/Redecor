@@ -17,6 +17,11 @@ namespace Game.UI
         [SerializeField]
         private Transform _parent;
 
+        private const float TEXT_HEIGHT = 40f;
+        private const float SUBCATEGORY_HEIGHT_0FFSET = 150f;
+        private const float SUBCATEGORY_WIDTH = 540f;
+        private const float MATERIALS_IN_COLUMN = 4;
+
         public List<ScriptableCellInfo> InfoToLoad
         {
             get { return _infoToLoad; }
@@ -30,6 +35,13 @@ namespace Game.UI
                 var material = Instantiate(_materialPrefab, _parent);
                 material.GetComponent<MaterialVariant>().ThisInfo = _infoToLoad[i];
             }
+            SetSubCategoryHeight();
+        }
+
+        private void SetSubCategoryHeight()
+        {
+            var modifier = Mathf.Ceil(_parent.childCount / MATERIALS_IN_COLUMN);
+            GetComponent<RectTransform>().sizeDelta = new Vector2(SUBCATEGORY_WIDTH, (modifier * SUBCATEGORY_HEIGHT_0FFSET) + TEXT_HEIGHT);
         }
     }
 }
