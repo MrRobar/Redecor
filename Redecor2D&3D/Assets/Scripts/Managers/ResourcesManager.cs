@@ -242,7 +242,8 @@ namespace Game.Managers
             yield return new WaitForSeconds(0.001f);
             for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
-                _keepersList[i].GetChild(0).GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -600f);
+                var keeper = _keepersList[i].GetChild(0).GetChild(0).GetComponent<RectTransform>();
+                keeper.anchoredPosition = new Vector2(300f, -keeper.sizeDelta.y / 2);
             }
         }
     }
