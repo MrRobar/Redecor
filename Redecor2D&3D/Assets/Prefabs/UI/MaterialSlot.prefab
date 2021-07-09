@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 8710991776326904611}
   - component: {fileID: 5822404869880698684}
   m_Layer: 5
-  m_Name: MaterialSlotNew
+  m_Name: MaterialSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,6 +222,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectToChange: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
   _thisInfo: {fileID: 0}
+  _spriteToShow: {fileID: 1401969412084771998}
+  _costText: {fileID: 701261725172229875}
+  _materialName: {fileID: 1410141747972100329}
+  _amountText: {fileID: 7197391537767035702}
 --- !u!1 &2135583134354615792
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +504,7 @@ GameObject:
   - component: {fileID: 5023048050174724473}
   - component: {fileID: 7197391537767035702}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
