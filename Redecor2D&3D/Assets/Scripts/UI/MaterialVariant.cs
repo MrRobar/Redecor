@@ -15,6 +15,18 @@ namespace Game.UI
         [SerializeField]
         private ScriptableCellInfo _thisInfo;
 
+        [SerializeField]
+        private Image _spriteToShow;
+
+        [SerializeField]
+        private TextMeshProUGUI _costText;
+
+        [SerializeField]
+        private TextMeshProUGUI _materialName;
+
+        [SerializeField]
+        private TextMeshProUGUI _amountText;
+
         public ScriptableCellInfo ThisInfo
         {
             get { return _thisInfo; }
@@ -34,9 +46,10 @@ namespace Game.UI
         IEnumerator LoadData()
         {
             yield return new WaitForSeconds(0.001f);
-            transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = _thisInfo.matName;
-            transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = _thisInfo.cost.ToString();
-            transform.GetChild(0).GetComponent<Image>().sprite = _thisInfo.spriteToShow;
+            _materialName.text = _thisInfo.matName;
+            _costText.text = _thisInfo.cost.ToString();
+            _amountText.text = _thisInfo.amount.ToString();
+            _spriteToShow.sprite = _thisInfo.spriteToShow;
         }
     }
 }
