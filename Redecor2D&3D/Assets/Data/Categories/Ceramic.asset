@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ceramic
   m_EditorClassIdentifier: 
   categoryName: Ceramic
-  subCategoriesAmount: 4
+  subCategoriesAmount: 3
   subCategories:
   - subCategoryName: Ceramic1
     infoToLoad:
@@ -22,41 +22,9 @@ MonoBehaviour:
   - subCategoryName: Ceramic2
     infoToLoad:
     - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
+    - {fileID: 11400000, guid: 4ff641845f807a34c93e57ac1f267a12, type: 2}
+    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
   - subCategoryName: Ceramic3
     infoToLoad:
     - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
     - {fileID: 11400000, guid: 4ff641845f807a34c93e57ac1f267a12, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-  - subCategoryName: Ceramic4
-    infoToLoad:
-    - {fileID: 11400000, guid: 55329cb552c58ce4780c6cfea2506a3d, type: 2}
-    - {fileID: 11400000, guid: 4ff641845f807a34c93e57ac1f267a12, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}
-    - {fileID: 11400000, guid: b6596b5dbafb3714e99b1d411a358ea2, type: 2}

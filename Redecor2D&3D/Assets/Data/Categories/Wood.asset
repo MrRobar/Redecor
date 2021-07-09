@@ -17,10 +17,9 @@ MonoBehaviour:
   subCategories:
   - subCategoryName: Wood1
     infoToLoad:
-    - {fileID: 11400000, guid: ca6caaae34040ae46aa5c849d57b55e2, type: 2}
-    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
+    - {fileID: 11400000, guid: de57a5cd99304874387794767b094d5f, type: 2}
+    - {fileID: 11400000, guid: e8168df2b481d6a4ba2dd74f1ba15ecf, type: 2}
   - subCategoryName: Wood2
     infoToLoad:
-    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
-    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
-    - {fileID: 11400000, guid: d404799e44a325e4c847d2a5f83867de, type: 2}
+    - {fileID: 11400000, guid: 77cce5f33fa3f0747bc1455479f21fa6, type: 2}
+    - {fileID: 11400000, guid: 25ee6da90ba7bf640be8c5adf93055b4, type: 2}
