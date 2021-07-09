@@ -5848,8 +5848,6 @@ MonoBehaviour:
   _dataKeeper: {fileID: 242191311}
   _categories:
   - {fileID: 11400000, guid: 36d4793b03dae1146a8be54fcab6f7d1, type: 2}
-  - {fileID: 11400000, guid: 6038a657b72033b43bd0091e6bc96751, type: 2}
-  - {fileID: 11400000, guid: c9246b4eece92954a8e9a9c85ab7cd41, type: 2}
 --- !u!114 &1309280990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7217,7 +7215,6 @@ MonoBehaviour:
   _dataKeeper: {fileID: 242191311}
   _categories:
   - {fileID: 11400000, guid: de54c9eb0bdd90f46a95b2dc86a2af9d, type: 2}
-  - {fileID: 11400000, guid: 36d4793b03dae1146a8be54fcab6f7d1, type: 2}
 --- !u!114 &1705758215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8345,7 +8342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dataKeeper: {fileID: 242191311}
-  _categories: []
+  _categories:
+  - {fileID: 11400000, guid: 27a0ca44e80663c428e8f4e186037853, type: 2}
 --- !u!114 &1908651775
 MonoBehaviour:
   m_ObjectHideFlags: 0
