@@ -16,7 +16,7 @@ namespace Game.Managers
         private EventListener _lateUpdateEventListener;
 
         [SerializeField]
-        private EventListener _subCategoriesSpawned;
+        private EventListener _spawnSubCategories;
 
         [SerializeField]
         private EventListener _spawnCategoriesEventListener;
@@ -72,14 +72,14 @@ namespace Game.Managers
         private void OnEnable()
         {
             _spawnCategoriesEventListener.OnEventHappened += LoadCategories;
-            _subCategoriesSpawned.OnEventHappened += ResetMaterialsContentPos;
+            //_spawnSubCategories.OnEventHappened += ResetMaterialsContentPos;
             LateUpdateSubscribeToEvents();
         }
 
         private void OnDisable()
         {
             _spawnCategoriesEventListener.OnEventHappened -= LoadCategories;
-            _subCategoriesSpawned.OnEventHappened -= ResetMaterialsContentPos;
+            //_spawnSubCategories.OnEventHappened -= ResetMaterialsContentPos;
             LateUpdateUnSubscribeToEvent();
         }
 
@@ -140,12 +140,14 @@ namespace Game.Managers
             }
             for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
+                _keepersList[i].gameObject.name = "CategoryKeeper " + i.ToString();
                 _keepersList[i].GetComponent<SubCategorySpawner>().CategoryData = _dataKeeper.categories[i];
                 _keepersList[i].GetComponent<SubCategorySpawner>().SpawnCategories();
                 _namesList[i].GetComponent<ButtonName>().SetData(_dataKeeper.categoriesNames[i]);
             }
             Instantiate(_empty, _namesParent);
             Instantiate(_empty, _materialsParent);
+            ResetMaterialsContentPos();
         }
 
         private void ResetMaterialsContentPos()
@@ -245,7 +247,7 @@ namespace Game.Managers
             yield return new WaitForSeconds(0.001f);
             for (int i = 0; i < _dataKeeper.categories.Count; i++)
             {
-                _keepersList[i].GetChild(0).GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -368.5f);
+                _keepersList[i].GetChild(0).GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -444.5f);
             }
         }
     }
