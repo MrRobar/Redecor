@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8841811164813063119}
   - component: {fileID: 8841811164813063118}
-  - component: {fileID: 8841811164813063117}
+  - component: {fileID: 7774568292038203154}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &8841811164813063117
+--- !u!114 &7774568292038203154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,21 +60,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 8841811164813063112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 250
+    m_Bottom: 0
   m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 1
-  m_CellSize: {x: 540, y: 320}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
 --- !u!1 &8841811166176022440
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4510239de384f4fbfbd6199ffc7582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnedCategoriesDispatcher: {fileID: 4037833562330638455}
   _subCategory: {fileID: 6809634894560905356, guid: ed23b271286bdb541ab32e3fb304b35a,
     type: 3}
   _parent: {fileID: 8841811164813063119}

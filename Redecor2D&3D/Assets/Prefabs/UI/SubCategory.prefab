@@ -227,10 +227,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6701635800448477060
 MonoBehaviour:
@@ -245,7 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _infoToLoad: []
-  _spawnSubCategoriesEventListener: {fileID: 43880022481288005}
   _materialPrefab: {fileID: 8562116396387416771, guid: 94a4aa5b166067244886af0f6fee6597,
     type: 3}
   _parent: {fileID: 3474531605136814823}
