@@ -338,7 +338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1916549814}
-  _spriteSender: {fileID: 1916549813}
 --- !u!60 &20029979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -684,7 +683,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 197932376}
-  _spriteSender: {fileID: 197932375}
 --- !u!60 &42781095
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -908,7 +906,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 284523049}
-  _spriteSender: {fileID: 284523048}
 --- !u!1 &79327497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1372,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1705758215}
-  _spriteSender: {fileID: 1705758214}
 --- !u!1 &163609787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +1907,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 170119289}
-  _spriteSender: {fileID: 170119288}
 --- !u!1 &188599449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,7 +2381,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1908651775}
-  _spriteSender: {fileID: 1908651774}
 --- !u!1 &236064214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3458,7 +3452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1309280990}
-  _spriteSender: {fileID: 1309280989}
 --- !u!1 &483041333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3878,7 +3871,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1997827553}
-  _spriteSender: {fileID: 1997827552}
 --- !u!1 &609998524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,7 +4605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1579531869}
-  _spriteSender: {fileID: 1579531868}
 --- !u!1 &952889351
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,7 +5288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 389346955}
-  _spriteSender: {fileID: 389346954}
 --- !u!1 &1196479071
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,7 +5416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 996162067}
-  _spriteSender: {fileID: 996162066}
 --- !u!60 &1196479077
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6401,7 +6390,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1758833919}
-  _spriteSender: {fileID: 1758833918}
 --- !u!1 &1486994534
 GameObject:
   m_ObjectHideFlags: 0
@@ -8106,7 +8094,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 188599455}
-  _spriteSender: {fileID: 188599454}
 --- !u!1 &1807428724
 GameObject:
   m_ObjectHideFlags: 0
@@ -8666,7 +8653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toActivate: {fileID: 1570343387}
-  _spriteSender: {fileID: 1570343386}
 --- !u!60 &1960737641
 PolygonCollider2D:
   m_ObjectHideFlags: 0
