@@ -2474,6 +2474,7 @@ GameObject:
   - component: {fileID: 242191310}
   - component: {fileID: 242191311}
   - component: {fileID: 242191312}
+  - component: {fileID: 242191313}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2590,6 +2591,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _someEvent: {fileID: 11400000, guid: 7d724ccd2419c0a439476aab42bb656c, type: 2}
+--- !u!114 &242191313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242191304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30074fd0c984d948a19a1cea859a98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
 --- !u!1 &284523043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4298,7 +4312,6 @@ GameObject:
   - component: {fileID: 842859171}
   - component: {fileID: 842859170}
   - component: {fileID: 842859169}
-  - component: {fileID: 842859173}
   - component: {fileID: 842859174}
   m_Layer: 5
   m_Name: MaterialsPanel
@@ -4342,7 +4355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lateUpdateEventListener: {fileID: 842859170}
-  _subCategoriesSpawned: {fileID: 842859173}
   _spawnCategoriesEventListener: {fileID: 842859174}
   _selectedID: {fileID: 11400000, guid: 695c3791abcbd904a80acc8d4d90aaa9, type: 2}
   _isScrolling: {fileID: 11400000, guid: ba1936b04c9e7964ea6518c20376b636, type: 2}
@@ -4410,19 +4422,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842859167}
   m_CullTransparentMesh: 0
---- !u!114 &842859173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842859167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _someEvent: {fileID: 11400000, guid: f00d3d467dee64a439ce5ffc9354fc62, type: 2}
 --- !u!114 &842859174
 MonoBehaviour:
   m_ObjectHideFlags: 0
