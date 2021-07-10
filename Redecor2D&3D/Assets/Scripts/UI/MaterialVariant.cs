@@ -3,14 +3,25 @@ using UnityEngine;
 using ScriptableValues;
 using TMPro;
 using UnityEngine.UI;
+using Events;
 
 namespace Game.UI
 {
+
     public class MaterialVariant : MonoBehaviour
     {
 
         [SerializeField]
+        private EventDispatcher _processDataDispatcher;
+
+        [SerializeField]
         private ScriptableSpriteRenderer _objectToChange;
+
+        [SerializeField]
+        private ScriptableSpriteValue _spriteToSet;
+
+        [SerializeField]
+        private ScriptableSpriteValue _defaultSprite;
 
         [SerializeField]
         private ScriptableCellInfo _thisInfo;
@@ -40,7 +51,9 @@ namespace Game.UI
 
         public void SetSpriteToObject()
         {
-            _objectToChange.data.sprite = _thisInfo.spriteToSet;
+            _spriteToSet.data = _thisInfo.spriteToSet;
+            _processDataDispatcher.Dispatch();
+            _defaultSprite.data = _thisInfo.spriteToSet;
         }
 
         IEnumerator LoadData()
