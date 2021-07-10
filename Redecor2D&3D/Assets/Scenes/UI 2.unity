@@ -1067,6 +1067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateEventListener: {fileID: 79327505}
   _spriteToChange: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _defaultSrite: {fileID: 11400000, guid: 0a128be2f47eb434dabf2b7a25efb51e, type: 2}
   thisCamera: {fileID: 79327499}
 --- !u!114 &79327505
 MonoBehaviour:
@@ -2475,6 +2476,10 @@ GameObject:
   - component: {fileID: 242191311}
   - component: {fileID: 242191312}
   - component: {fileID: 242191313}
+  - component: {fileID: 242191316}
+  - component: {fileID: 242191315}
+  - component: {fileID: 242191314}
+  - component: {fileID: 242191317}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2604,6 +2609,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+--- !u!114 &242191314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242191304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 3acad232778d6614ab55da1aeafec239, type: 2}
+--- !u!114 &242191315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242191304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 5199424992f80a24f898e507f2ea0f00, type: 2}
+--- !u!114 &242191316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242191304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583967fc478f80a40a54a512b1678bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _processDataEventListener: {fileID: 242191315}
+  _undoEventListener: {fileID: 242191314}
+  _redoEventListener: {fileID: 242191317}
+  _rendererToChange: {fileID: 11400000, guid: 4ed034cccfdc0ae45b78c4386435096e, type: 2}
+  _spriteToSet: {fileID: 11400000, guid: b3746ad4c60081c4c93fe9c097ee57c2, type: 2}
+  _defaultSprite: {fileID: 11400000, guid: 0a128be2f47eb434dabf2b7a25efb51e, type: 2}
+--- !u!114 &242191317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242191304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f5f40b3fd0d7e4daad8d68b733db96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 840930fdfd27fa64ab1baf2e75637890, type: 2}
 --- !u!1 &284523043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,8 +2992,9 @@ GameObject:
   - component: {fileID: 396955747}
   - component: {fileID: 396955746}
   - component: {fileID: 396955745}
+  - component: {fileID: 396955748}
   m_Layer: 5
-  m_Name: Forward_Button
+  m_Name: Redo_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2998,7 +3061,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 396955746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 396955748}
+        m_MethodName: Dispatch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &396955746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3036,6 +3110,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396955743}
   m_CullTransparentMesh: 0
+--- !u!114 &396955748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396955743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c6039ccd6867140b43384375be12fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 840930fdfd27fa64ab1baf2e75637890, type: 2}
 --- !u!1 &446126309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5474,6 +5561,7 @@ GameObject:
   - component: {fileID: 1216793158}
   - component: {fileID: 1216793157}
   - component: {fileID: 1216793156}
+  - component: {fileID: 1216793159}
   m_Layer: 5
   m_Name: Undo_Button
   m_TagString: Untagged
@@ -5542,7 +5630,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1216793157}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1216793159}
+        m_MethodName: Dispatch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1216793157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5580,6 +5679,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216793154}
   m_CullTransparentMesh: 0
+--- !u!114 &1216793159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216793154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c6039ccd6867140b43384375be12fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _someEvent: {fileID: 11400000, guid: 3acad232778d6614ab55da1aeafec239, type: 2}
 --- !u!1 &1305098869
 GameObject:
   m_ObjectHideFlags: 0
