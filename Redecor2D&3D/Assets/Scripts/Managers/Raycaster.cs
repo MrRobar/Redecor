@@ -18,6 +18,9 @@ namespace Game.Managers
         private ScriptableSpriteRenderer _spriteToChange;
 
         [SerializeField]
+        private ScriptableSpriteValue _defaultSrite;
+
+        [SerializeField]
         private Camera thisCamera;
 
 
@@ -44,7 +47,9 @@ namespace Game.Managers
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
                 if (hit.collider != null)
                 {
-                    _spriteToChange.data = hit.collider.GetComponent<SpriteRenderer>();
+                    var rend = hit.collider.GetComponent<SpriteRenderer>();
+                    _spriteToChange.data = rend;
+                    _defaultSrite.data = rend.sprite;
                     hit.collider.GetComponent<ChoseThroughObject>().UpdateUI();
                 }
             }
