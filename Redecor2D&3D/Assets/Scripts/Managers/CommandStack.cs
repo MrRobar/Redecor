@@ -7,12 +7,18 @@ namespace Game.Managers
     public class CommandStack
     {
 
-        public Stack<ICommand> _commandHistory = new Stack<ICommand>();
+        public List<ICommand> _commandHistory = new List<ICommand>();
+        private int _index;
 
         public void ExecuteCommand(ICommand command)
         {
+            if(_index < _commandHistory.Count)
+            {
+                _commandHistory.RemoveRange(_index, _commandHistory.Count - 1);
+            }
+            _commandHistory.Add(command);
             command.Execute();
-            _commandHistory.Push(command);
+            _index++;
         }
 
         public void UndoLastCommand()
@@ -21,7 +27,11 @@ namespace Game.Managers
             {
                 return;
             }
-            _commandHistory.Pop().Undo();
+            if(_index > 0)
+            {
+                _commandHistory[_index - 1].Undo();
+                _index--;
+            }
         }
 
         public void RedoLastCommand()
@@ -30,7 +40,11 @@ namespace Game.Managers
             {
                 return;
             }
-            _commandHistory.Pop().Redo();
+            if(_index < _commandHistory.Count)
+            {
+                _index++;
+                _commandHistory[_index - 1].Execute();
+            }
         }
     }
 }
