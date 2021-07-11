@@ -6,6 +6,5 @@
 
         void Execute();
         void Undo();
-        void Redo();
     }
 }
