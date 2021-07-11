@@ -51,13 +51,11 @@ namespace Game.Managers
         private void UndoCommand()
         {
             _commandStack.UndoLastCommand();
-            Debug.Log(_commandStack._commandHistory.Count);
         }
 
         private void RedoCommand()
         {
             _commandStack.RedoLastCommand();
-            Debug.Log(_commandStack._commandHistory.Count);
         }
     }
 }
