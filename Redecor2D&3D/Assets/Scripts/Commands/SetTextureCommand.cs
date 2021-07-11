@@ -26,12 +26,5 @@ namespace Game.Commands
         {
             _spriteRendererToChange.sprite = _originalSprite;
         }
-
-        public void Redo()
-        {
-            //Debug.Log(_newSprite.name);
-            //_spriteRendererToChange.sprite = _newSprite;
-            Execute();
-        }
     }
 }
