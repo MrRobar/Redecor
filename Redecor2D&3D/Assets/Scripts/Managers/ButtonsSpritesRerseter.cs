@@ -32,5 +32,13 @@ namespace Game.Managers
                 _buttonsImages[i].ResetButtonSprite();
             }
         }
+
+        public void SetState()
+        {
+            for (int i = 0; i < _buttonsImages.Count; i++)
+            {
+                _buttonsImages[i].gameObject.SetActive(!_buttonsImages[i].gameObject.activeSelf);
+            }
+        }
     }
 }
