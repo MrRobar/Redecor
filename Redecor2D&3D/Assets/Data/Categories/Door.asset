@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
+  m_Name: Door
+  m_EditorClassIdentifier: 
+  categoryName: Door
+  subCategoriesAmount: 1
+  subCategories:
+  - subCategoryName: Wood
+    infoToLoad:
+    - {fileID: 11400000, guid: de57a5cd99304874387794767b094d5f, type: 2}
+    - {fileID: 11400000, guid: e8168df2b481d6a4ba2dd74f1ba15ecf, type: 2}
+    - {fileID: 11400000, guid: 77cce5f33fa3f0747bc1455479f21fa6, type: 2}
+    - {fileID: 11400000, guid: 25ee6da90ba7bf640be8c5adf93055b4, type: 2}
+    - {fileID: 11400000, guid: d99f6486f58339d4688654844ed0c0d1, type: 2}
+    - {fileID: 11400000, guid: 64a96a411526470458fff5c592d5a369, type: 2}
+    - {fileID: 11400000, guid: c7c2de4f7b6374046b4dcfcedf243a27, type: 2}
+    - {fileID: 11400000, guid: c59436a39df04794ab4e268ff8fb47e9, type: 2}
+    - {fileID: 11400000, guid: 0f0d5effaa66ab449831668bb13103ae, type: 2}
+    - {fileID: 11400000, guid: 90b69502d372656409f8cd09d52e5eb3, type: 2}
+    - {fileID: 11400000, guid: ffd9a2c08a6a6384989d8e61da656ab6, type: 2}
+    - {fileID: 11400000, guid: ff0aee1c482041c4bb335778e823caa4, type: 2}

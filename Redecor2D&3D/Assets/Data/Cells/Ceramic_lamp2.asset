@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2de4699de4963439a668ac4198ff92, type: 3}
+  m_Name: Ceramic_lamp2
+  m_EditorClassIdentifier: 
+  spriteToShow: {fileID: 21300000, guid: 1cd94390a1a46ef4c8aab5fc6674a698, type: 3}
+  spriteToSet: {fileID: 21300000, guid: 2dd6f7414261d84409253b5b53897476, type: 3}
+  spriteBlocked: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  cost: 1500
+  amount: 5
+  matName: Cartagena Clay
+  categoryName: Glass

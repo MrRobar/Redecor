@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
+  m_Name: Towel
+  m_EditorClassIdentifier: 
+  categoryName: Towel
+  subCategoriesAmount: 1
+  subCategories:
+  - subCategoryName: Textille
+    infoToLoad:
+    - {fileID: 11400000, guid: 179b007a435f5454b8c7db297bf21cf2, type: 2}
+    - {fileID: 11400000, guid: f4cf95dc11d81dc4da4ecf674bad89f5, type: 2}
+    - {fileID: 11400000, guid: d5e2e251e39ab6349972510d2a179d61, type: 2}
+    - {fileID: 11400000, guid: 8e77c6ab3bb57fa4aa054736aabb532b, type: 2}
+    - {fileID: 11400000, guid: fbb299f183ca0ef47a4acfe0b634f9c9, type: 2}

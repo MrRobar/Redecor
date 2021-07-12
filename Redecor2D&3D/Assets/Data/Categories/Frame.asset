@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
-  m_Name: Metal
+  m_Name: Frame
   m_EditorClassIdentifier: 
-  categoryName: Metal
+  categoryName: Frame
   subCategoriesAmount: 1
   subCategories:
-  - subCategoryName: Metal
+  - subCategoryName: Wood
     infoToLoad:
-    - {fileID: 11400000, guid: b43dad7f807793242895d13bd4134440, type: 2}
-    - {fileID: 11400000, guid: 93d7feff6f7b5e54d85e449baeb2945c, type: 2}
-    - {fileID: 11400000, guid: 6b89f12b6be1e0141818ce32273356a9, type: 2}
-    - {fileID: 11400000, guid: 633f40e5de0613b429aa05e28c1e224f, type: 2}
+    - {fileID: 11400000, guid: 88dcf7656d63f0b4d9f64722d0772c12, type: 2}
+    - {fileID: 11400000, guid: 9323aeff65838004c94d6fcaa18aee39, type: 2}
+    - {fileID: 11400000, guid: 31383d065f511b34491bdc75639eb9f0, type: 2}
+    - {fileID: 11400000, guid: 0968868a7152d7f4ea533378275e3144, type: 2}
+    - {fileID: 11400000, guid: 91eae392cc87bca4f8dbbfb4e29f1042, type: 2}

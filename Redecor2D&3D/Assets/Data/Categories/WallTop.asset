@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
+  m_Name: WallTop
+  m_EditorClassIdentifier: 
+  categoryName: WallTop
+  subCategoriesAmount: 2
+  subCategories:
+  - subCategoryName: Wood
+    infoToLoad:
+    - {fileID: 11400000, guid: ebe22874362407247becd9ae9cf0c812, type: 2}
+    - {fileID: 11400000, guid: 032bd192442df174fb2d85c13b167bbb, type: 2}
+    - {fileID: 11400000, guid: 5aade23282d84874da652c2738503feb, type: 2}
+    - {fileID: 11400000, guid: 4f352dbe8d4b04d4c86d344a1820b013, type: 2}
+  - subCategoryName: Ceramic
+    infoToLoad:
+    - {fileID: 11400000, guid: 093b7d729a1624649941dfedeaad43f5, type: 2}
+    - {fileID: 11400000, guid: b00850a013558c241a564df50bbef947, type: 2}
+    - {fileID: 11400000, guid: cc884da1406c4e541a6df836512af288, type: 2}
+    - {fileID: 11400000, guid: 8edd69207b3c03447b007ede6f9fcb35, type: 2}

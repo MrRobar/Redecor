@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
+  m_Name: Carpet
+  m_EditorClassIdentifier: 
+  categoryName: Carpet
+  subCategoriesAmount: 1
+  subCategories:
+  - subCategoryName: Textille
+    infoToLoad:
+    - {fileID: 11400000, guid: ca6caaae34040ae46aa5c849d57b55e2, type: 2}
+    - {fileID: 11400000, guid: bcc7908b52526464e92bafbddd01a636, type: 2}
+    - {fileID: 11400000, guid: fd8adedaa12cab84090e32e89bf14b65, type: 2}
+    - {fileID: 11400000, guid: d404799e44a325e4c847d2a5f83867de, type: 2}
+    - {fileID: 11400000, guid: a9b4a7b838135d546bb14c69fb4ae120, type: 2}
+    - {fileID: 11400000, guid: d21ceded3a0e7aa46b7124185f910faa, type: 2}
+    - {fileID: 11400000, guid: eda96e52228ebf64895eb02b5cad1e4e, type: 2}
+    - {fileID: 11400000, guid: 5032de864b6f52545b63c77cb6a1ec4e, type: 2}
+    - {fileID: 11400000, guid: dfeab266198588042b33df5d1a954889, type: 2}
+    - {fileID: 11400000, guid: ed3a7aa438584574e886c68f9bba4e3d, type: 2}
+    - {fileID: 11400000, guid: f28c9feee02b1dc4388fb9d3e6d45e7f, type: 2}
+    - {fileID: 11400000, guid: e8d1a0a622ca29d4ea79b8a5a6c4df43, type: 2}

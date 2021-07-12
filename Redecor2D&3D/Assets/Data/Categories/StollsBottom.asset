@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
-  m_Name: Metal
+  m_Name: StollsBottom
   m_EditorClassIdentifier: 
-  categoryName: Metal
+  categoryName: StollsBottom
   subCategoriesAmount: 1
   subCategories:
-  - subCategoryName: Metal
+  - subCategoryName: Wood
     infoToLoad:
-    - {fileID: 11400000, guid: b43dad7f807793242895d13bd4134440, type: 2}
-    - {fileID: 11400000, guid: 93d7feff6f7b5e54d85e449baeb2945c, type: 2}
-    - {fileID: 11400000, guid: 6b89f12b6be1e0141818ce32273356a9, type: 2}
-    - {fileID: 11400000, guid: 633f40e5de0613b429aa05e28c1e224f, type: 2}
+    - {fileID: 11400000, guid: 7fb091ce0c5b369489f571c1555a0f30, type: 2}
+    - {fileID: 11400000, guid: 48737a6407281a247b9de0024ac54547, type: 2}
+    - {fileID: 11400000, guid: cdb87c777e11d014a983eb43fb20b6f3, type: 2}
+    - {fileID: 11400000, guid: 51627735651aee749a3a351468325747, type: 2}

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
-  m_Name: Metal
+  m_Name: WashBasinBox
   m_EditorClassIdentifier: 
-  categoryName: Metal
+  categoryName: WashBasinBox
   subCategoriesAmount: 1
   subCategories:
-  - subCategoryName: Metal
+  - subCategoryName: Wood
     infoToLoad:
-    - {fileID: 11400000, guid: b43dad7f807793242895d13bd4134440, type: 2}
-    - {fileID: 11400000, guid: 93d7feff6f7b5e54d85e449baeb2945c, type: 2}
-    - {fileID: 11400000, guid: 6b89f12b6be1e0141818ce32273356a9, type: 2}
-    - {fileID: 11400000, guid: 633f40e5de0613b429aa05e28c1e224f, type: 2}
+    - {fileID: 11400000, guid: b99c33800e6173f4fb30f74f739b9f89, type: 2}
+    - {fileID: 11400000, guid: a4503d459fc37ba4c8608d93add333cd, type: 2}
+    - {fileID: 11400000, guid: b6ddf14b221da904bb88eb9c8238a55f, type: 2}
+    - {fileID: 11400000, guid: 55100be5d13deef4eb1477f227b6b6a2, type: 2}

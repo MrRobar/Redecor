@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa607fc3fe4917a47b3f92f13a754508, type: 3}
+  m_Name: WashBasin
+  m_EditorClassIdentifier: 
+  categoryName: WashBasin
+  subCategoriesAmount: 2
+  subCategories:
+  - subCategoryName: Ceramic
+    infoToLoad:
+    - {fileID: 11400000, guid: 7f99fc04392e5a542843ab25cf877e55, type: 2}
+    - {fileID: 11400000, guid: ee2c6deaa0c4b7843806d5243f23c359, type: 2}
+    - {fileID: 11400000, guid: 5418632977397984c8cd1e66d3d8ca0f, type: 2}
+    - {fileID: 11400000, guid: 825cc01caf07fc94cb9d649b2f5cf1b2, type: 2}
+  - subCategoryName: Marble
+    infoToLoad:
+    - {fileID: 11400000, guid: 1f39fc3401d905e42a93215afc478275, type: 2}
+    - {fileID: 11400000, guid: 0916876d8e147c345aad9a4aa56d82d5, type: 2}
+    - {fileID: 11400000, guid: 0edd8b145f042394b9e123990cca4872, type: 2}
+    - {fileID: 11400000, guid: 98596a6f15b1b9d4780fb189796b549c, type: 2}
